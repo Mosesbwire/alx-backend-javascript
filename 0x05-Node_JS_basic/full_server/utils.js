@@ -1,6 +1,8 @@
 const fs = require('fs');
 
 function readDatabase(filePath) {
+    const objData = {};
+
     return new Promise((resolve, reject) => {
         fs.readFile(filePath, { encoding: 'utf-8' }, (err, data) => {
 
@@ -8,13 +10,13 @@ function readDatabase(filePath) {
                 return reject(new Error('Cannot read from databse'));
             }
 
-            const students = data.split('\r\n').map((dt, idx) => {
+            data.split('\r\n').forEach((dt, idx) => {
                 if (dt !== '' && idx !== 0) {
-
-                    return dt.split(',')[0]
+                    const row = dt.split(',');
+                    objData[row[0]] = row;
                 }
-            }).filter(std => std !== undefined);
-            return resolve(students);
+            })
+            return resolve(objData);
         });
     });
 }
