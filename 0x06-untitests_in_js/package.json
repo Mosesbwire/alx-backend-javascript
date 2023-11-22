@@ -1,0 +1,14 @@
+{
+  "name": "unittests",
+  "version": "1.0.0",
+  "description": "writing unittests in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Moses",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
