@@ -37,4 +37,8 @@ describe('sendPaymentRequestToApi', function () {
     sendPaymentRequestToApi('SUM', 100, 20);
     calculateSpy.calledWith(20);
   });
+  it('should return 120', function () {
+    sendPaymentRequestToApi('sum', 100, 20);
+    calculateSpy.returned(120);
+  });
 });
