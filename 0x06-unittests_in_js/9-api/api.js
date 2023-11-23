@@ -11,7 +11,7 @@ app.get('/cart/:id', (req, res) => {
   if (!Number(id)) {
     return res.status(404).send('Not found');
   }
-  return res.status(200).send(`Payment methods for cart: ${id}`);
+  return res.status(200).send(`Payment methods for cart ${id}`);
 });
 
 app.listen(7865, () => {

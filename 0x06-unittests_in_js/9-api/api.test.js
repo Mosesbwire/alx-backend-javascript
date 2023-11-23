@@ -14,7 +14,7 @@ describe('test index page', () => {
   });
   it('should return string as response on success', function () {
     request('http://localhost:7865/cart/200', (error, response, body) => {
-      const respBody = 'Payment methods for cart: 200';
+      const respBody = 'Payment methods for cart 200';
       expect(respBody).to.be.equal(body);
     });
   });
