@@ -17,7 +17,7 @@ app.get('/cart/:id', (req, res) => {
   return res.status(200).send(`Payment methods for cart ${id}`);
 });
 
-app.get('/available-payments', (req, res) => {
+app.get('/available_payments', (req, res) => {
   const data = {
     payment_methods: {
       credit_cards: true,

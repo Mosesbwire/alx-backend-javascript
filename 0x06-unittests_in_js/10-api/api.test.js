@@ -39,14 +39,14 @@ describe('test index page', () => {
 
 describe('available-payments', function () {
   it('should return statusCode 200 on success', function () {
-    request('http://localhost:7865/available-payments', (error, response, body) => {
+    request('http://localhost:7865/available_payments', (error, response, body) => {
       const statusCode = 200;
       expect(statusCode).to.be.equal(response.statusCode);
     });
   });
   // eslint-disable-next-line jest/expect-expect
   it('should return object on success', function () {
-    request('http://localhost:7865/available-payments', (error, response, body) => {
+    request('http://localhost:7865/available_payments', (error, response, body) => {
       const objResp = {
         payment_methods: {
           credit_cards: true,
